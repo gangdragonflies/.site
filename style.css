@@ -1,0 +1,50 @@
+/* Configurações para toda a página */
+body {
+    background-color: #000000; /* Fundo preto */
+    color: #00ff00;            /* Texto verde puro (estilo terminal) */
+    font-family: 'Consolas', 'Courier New', Courier, monospace; /* Fonte Consolas */
+    
+    margin: 0;               /* Remove margens padrão do navegador */
+    display: flex;           /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente (no meio) */
+    align-items: flex-start; /* Alinha no topo (superior) */
+    min-height: 100vh;       /* Garante que o corpo ocupe toda a altura da tela */
+    
+    /* OBSERVAÇÃO IMPORTANTE ABAIXO */
+    flex-direction: column;  /* Alinha os itens em coluna (um embaixo do outro) */
+}
+
+.imagem-topo {
+    max-width: 100%;         /* Impede que a imagem ultrapasse a largura da tela */
+    height: auto;            /* Mantém a proporção original da imagem */
+    margin-top: 20px;        /* Dá um espaço confortável em relação ao topo */
+    align-self: center;      /* Garante que especificamente a imagem fique centralizada */
+}
+
+/* Configurações específicas para o h3 se precisar ajustar o tamanho */
+h3 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;      /* Centraliza o texto do h3 */
+    width: 100%;
+}
+
+/* 1. Esta regra cuida exclusivamente de centralizar o link e o botão juntos */
+.link-botao-centralizado {
+    display: block;        /* Permite usar margens automáticas */
+    width: max-content;    /* Faz o link ter o tamanho exato do botão */
+    margin: 10px auto;     /* Centraliza horizontalmente na tela */
+    text-decoration: none;  /* Remove sublinhados indesejados do link */
+}
+
+/* 2. Esta regra aplica o visual hacker idêntico para TODOS os botões da página */
+button {
+    font-family: 'Consolas', monospace;
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;         /* Mantém a consistência de bloco */
+    margin: 0;              /* Zera a margem interna do botão, já que o link centraliza */
+}
